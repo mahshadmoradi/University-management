@@ -221,6 +221,7 @@ public class GodPanelControll implements Initializable{
 
     public void addstudent() throws IOException{
         if(a.getText().isEmpty()) wrongadd.setText("please enter student number.");
+        else if(Student.searchp(a.getText())!=null) wrongadd.setText("the student number already exists");
         else {
             Student student=new Student(a.getText());
             if(!b.getText().isEmpty()) student.setName(b.getText());
@@ -255,6 +256,7 @@ public class GodPanelControll implements Initializable{
 
     public void adddepartment() throws IOException{
         if(a2.getText().isEmpty()) wrongadd2.setText("please enter name.");
+        else if(Department.finddepartment(a2.getText())!=null) wrongadd.setText("the department already exists");
         else {
             Department department=new Department(a2.getText());
             department.setId(b2.getText());

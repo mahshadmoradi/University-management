@@ -49,7 +49,6 @@ public class DepartmentPanelControll implements Initializable{
     @FXML
     private Label wrongadd;
 
-
     ObservableList<Course> clist=FXCollections.observableArrayList();
     ObservableList<Student> slist=FXCollections.observableArrayList();
 
@@ -220,7 +219,7 @@ public class DepartmentPanelControll implements Initializable{
                 DepartmentPanelControll.getDepartment().addtostudents(student);
                 Student.addtostudents(student);
                 addwindow.setVisible(false);
-                studentView.getItems().addAll(department.getStudents());
+                studentView.getItems().setAll(department.getStudents());
             }
             break;
         }
