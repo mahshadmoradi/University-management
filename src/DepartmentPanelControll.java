@@ -186,7 +186,7 @@ public class DepartmentPanelControll implements Initializable{
                 professor.setRank(rank.getValue());
                 Professor.addtoprofessors(professor);
                 addwindow.setVisible(false);
-                professorView.getItems().addAll(department.getFaculty());
+                professorView.getItems().setAll(department.getFaculty());
             }
             break;
             case 2:
